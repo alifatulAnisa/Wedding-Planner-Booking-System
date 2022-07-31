@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>Attire</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        <a href="index.html"><img src="assets/img/wedding.jpg" width="150"></a>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Package <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+	  <a href="packageA.htm" class="w3-bar-item w3-button">Package A</a>
+      <a href="packageB.htm" class="w3-bar-item w3-button">Package B</a>
+      <a href="packageC.htm" class="w3-bar-item w3-button">Package C</a>
+    </div>
+	<div>
+	  <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Custom <i class="fa fa-caret-down"></i></a>
+	  <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+	  <a href="attire.htm" class="w3-bar-item w3-button">Attire</a>
+      <a href="catering.htm" class="w3-bar-item w3-button">Catering</a>
+      <a href="jewelry.htm" class="w3-bar-item w3-button">Jewelry</a>
+	  <a href="photography.htm" class="w3-bar-item w3-button">Photography</a>
+      <a href="flower.htm" class="w3-bar-item w3-button">Flower</a>
+      <a href="weddingcake.htm" class="w3-bar-item w3-button">Wedding Cake</a>
+	</div>
+  </div>
+    <!--<a href="packages.html" class="w3-bar-item w3-button w3-padding">Back</a>-->
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <p><a href="index.html"><h3 class="w3-wide"><b>Wedding Planner</b></h3></a></p>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+   
+  </header>
+  
+<br>
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="assets/img/package/76.jpg" width="400" height="550">
+	   <br><br><br>
+      </div>
+   </div>
+   <div class="w3-col l3 s6">
+      <div class="w3-container">
+      </div>
+    </div>
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+		<br>
+        <p><h2 style="width:100%"><b>Generation Tux</b><br>RM760.00</h2></p>
+		<br>
+		<p><h4>Size</h4></p>
+		<input list="size" name="size" style="width:50%" min="1" max="50" required>
+		<datalist id="size">
+			<option value="XS">
+			<option value="S">
+			<option value="M">
+			<option value="L">
+			<option value="XL">
+		</datalist>
+		<br><br>
+		<button type="submit" class="w3-button w3-block w3-black">Add To Book</button>
+		<br>
+		<p><h4>Description:</h4></p>
+		<ul style="width:250%">
+		<li>A charcoal gray notch lapel suit that is perfect for any event, day or night. This charcoal gray suit rental features Super 130’s Merino wool, flat front pants and sizing available in both modern and slim fits.</li>
+	
+		</u>
+      </div>
+    </div>
+ </div>
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myAccFunc2() {
+    var x = document.getElementById("demoAcc2");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
